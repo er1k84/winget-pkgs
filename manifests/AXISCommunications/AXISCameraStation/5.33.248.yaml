@@ -1,0 +1,32 @@
+# ================== General ==================
+Id: AXISCommunications.AXISCameraStation
+Publisher: AXISCommunications
+License: Copyright AXIS Communications
+Name: AXISCameraStation
+Author: AXISCommunciations
+Description: AXIS Camera Station is a video management software for surveillance specially developed for small and midsized installations.
+AppMoniker: AXIS Camera Station
+Tags: VMS, Video Managment System, CCTV, Security
+
+
+
+Homepage: https://www.axis.com/en-us/products/axis-camera-station/overview
+
+# ================= Installer =================
+MinOSVersion: 10.0.0.0
+#Channel: stable                # Channel is not supported in this preview (5/24/2020)
+Version: 5.33.248
+
+InstallerType: exe
+Switches:
+      Silent: "/VERYSILENT /NORESTART /ALLUSERS /LOG"
+      SilentWithProgress: "/VERYSILENT /NORESTART /ALLUSERS"
+
+#Log: LOG=\%temp%\ACS_INSTALL_LOG.log
+Installers:
+  - Arch: x64
+    Url: http://cdn.axis.com/ftp/pub_soft/cam_srv/cam_station/latest/AXISCameraStationSetup.exe
+    Sha256: d2c7d97f9c14a7615dc35fe9054344f36e358e738dded1d057122648b4677ead
+    Language: en-US
+    Scope: Machine
+# ManifestVersion: 0.1.0
